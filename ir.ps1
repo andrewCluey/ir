@@ -55,8 +55,9 @@ Trace-Log "Gateway download location: $gwPath"
 $filename = "C:\Windows\System32\drivers\etc\hosts"
 $hostentries = ${hosts}
 
+
 foreach ($entry in $hostentries) {
     add-host -entry $entry
 }
 
-#Download-Gateway $uri $gwPath
+Download-Gateway $uri $gwPath
