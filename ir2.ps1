@@ -10,6 +10,5 @@ $uri = "https://go.microsoft.com/fwlink/?linkid=839822"
 
 $ipaddress + "`t`t" + $hostname | Out-File -encoding ASCII -append $filename
 
-$client = New-Object System.Net.WebClient
-$client.DownloadFile($uri, $gwPath)
+Invoke-WebRequest -Uri $uri -OutFile $gwpath
 
